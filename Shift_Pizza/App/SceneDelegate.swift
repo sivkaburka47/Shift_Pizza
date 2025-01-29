@@ -11,12 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var appRouter: AppRouter?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
         appRouter = AppRouter(window: window)
-        appRouter?.navigateToMain()
+        appRouter?.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -33,7 +33,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
-
-
 }
-

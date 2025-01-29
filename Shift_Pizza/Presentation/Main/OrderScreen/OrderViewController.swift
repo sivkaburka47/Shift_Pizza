@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  OrderViewController.swift
 //  Shift_Pizza
 //
 //  Created by Станислав Дейнекин on 28.01.2025.
@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class OrderViewController: UIViewController {
 
-    private let viewModel: MainViewModel
+    private let viewModel: OrderViewModel
 
-    init(viewModel: MainViewModel) {
+    init(viewModel: OrderViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,7 +23,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
-        title = "Shift Pizza"
+        view.backgroundColor = .green
     }
 }
