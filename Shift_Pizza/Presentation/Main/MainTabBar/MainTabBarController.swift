@@ -40,8 +40,11 @@ enum TabBarItem: CaseIterable {
 
 final class MainTabBarController: UITabBarController {
     
+    weak var appRouterDelegate: AppRouterDelegate?
+    
     private lazy var mainViewController: MainViewController = {
         let viewModel = MainViewModel()
+        viewModel.delegate = self
         let controller = MainViewController(viewModel: viewModel)
         controller.tabBarItem = UITabBarItem(
             title: TabBarItem.main.title,
@@ -120,6 +123,14 @@ final class MainTabBarController: UITabBarController {
         border.frame = CGRect(x: 0, y: 0, width: tabBar.frame.width, height: 1)
         tabBar.addSubview(border)
     }
+}
+
+
+extension MainTabBarController: MainViewModelDelegate {
+    func navigateToPizzaDetails(pizza: PizzaEntity) {
+        appRouterDelegate?.navigateToPizzaDetails(pizza: pizza)
+    }
+
 }
 
 

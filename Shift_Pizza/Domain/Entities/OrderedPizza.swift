@@ -1,43 +1,24 @@
 //
-//  PizzasResponse.swift
+//  OrderedPizza.swift
 //  Shift_Pizza
 //
-//  Created by Станислав Дейнекин on 29.01.2025.
+//  Created by Станислав Дейнекин on 30.01.2025.
 //
 
 import Foundation
 
-struct PizzasEntity: Codable {
-    let success: Bool
-    let reason: String?
-    let catalog: [PizzaEntity]
+struct OrderedPizza: Codable {
+    var id: String
+    var name: String
+    var toppings: [OrderedPizzaIngredient]
+    var size: OrderedPizzaSize
+    var doughs: OrderedPizzaDough
+    var totalPrice: Int
 }
 
-struct PizzaEntity: Codable {
-    let id: String
-    let name: String
-    let ingredients: [PizzaIngredientEntity]
-    let toppings: [PizzaIngredientEntity]
-    let description: String
-    let sizes: [PizzaSizeEntity]
-    let doughs: [PizzaDoughEntity]
-    let calories: Int
-    let protein: String
-    let totalFat: String
-    let carbohydrates: String
-    let sodium: String
-    let allergens: [String]
-    let isVegetarian: Bool
-    let isGlutenFree: Bool
-    let isNew: Bool
-    let isHit: Bool
-    let img: String
-}
-
-struct PizzaIngredientEntity: Codable {
+struct OrderedPizzaIngredient: Codable {
     let name: String
     let cost: Int
-    let img: String
     
     var nameInRus: String {
         switch name {
@@ -84,7 +65,7 @@ struct PizzaIngredientEntity: Codable {
 }
 
 
-struct PizzaSizeEntity: Codable {
+struct OrderedPizzaSize: Codable {
     let name: String
     let price: Int
     
@@ -102,7 +83,7 @@ struct PizzaSizeEntity: Codable {
     }
 }
 
-struct PizzaDoughEntity: Codable {
+struct OrderedPizzaDough: Codable {
     let name: String
     let price: Int
     

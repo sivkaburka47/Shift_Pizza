@@ -36,16 +36,16 @@ struct Pizza: Codable {
 
 struct PizzaIngredient: Codable {
     let name: String
-    let cost: Double
+    let cost: Int
     let img: String
 }
 
 struct PizzaSize: Codable {
     let name: String
-    let price: Double
+    let price: Int
 }
 
 struct PizzaDough: Codable {
     let name: String
-    let price: Double
+    let price: Int
 }

@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
     private func updatePizzaViews() {
         contentStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
-        for pizza in viewModel.pizzas {
+        for (index, pizza) in viewModel.pizzas.enumerated() {
             let cardView = UIView()
             cardView.backgroundColor = .white
             
@@ -133,12 +133,19 @@ class MainViewController: UIViewController {
                 make.top.equalToSuperview()
                 make.right.equalToSuperview()
             }
+
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapPizzaCard(_:)))
+            cardView.addGestureRecognizer(tapGesture)
+            cardView.tag = index
             
             contentStackView.addArrangedSubview(cardView)
         }
-        
-        contentStackView.setCustomSpacing(24, after: contentStackView.arrangedSubviews.last ?? UIView())
     }
 
-
+    @objc private func didTapPizzaCard(_ sender: UITapGestureRecognizer) {
+        guard let index = sender.view?.tag else { return }
+        let selectedPizza = viewModel.pizzas[index]
+        viewModel.didSelectPizza(selectedPizza)
+        
+    }
 }

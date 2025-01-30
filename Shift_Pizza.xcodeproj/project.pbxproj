@@ -37,6 +37,14 @@
 		E6B2B8C42D497BF4001D084E /* EmptyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */; };
 		E6B2B8C62D497D0C001D084E /* GetPizzasCatalogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */; };
 		E6B2B8C82D497EEE001D084E /* PizzasEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */; };
+		E6B2B8CB2D4A25BE001D084E /* PizzaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */; };
+		E6B2B8CD2D4A25C5001D084E /* PizzaDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */; };
+		E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */; };
+		E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */; };
+		E6B2B8D32D4A6FFE001D084E /* SupplementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */; };
+		E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */; };
+		E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */; };
+		E6B2B8D92D4AB99D001D084E /* OrderedPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +77,14 @@
 		E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequestModel.swift; sourceTree = "<group>"; };
 		E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPizzasCatalogUseCase.swift; sourceTree = "<group>"; };
 		E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasEntity.swift; sourceTree = "<group>"; };
+		E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewController.swift; sourceTree = "<group>"; };
+		E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitButton.swift; sourceTree = "<group>"; };
+		E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementCell.swift; sourceTree = "<group>"; };
+		E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCustomButton.swift; sourceTree = "<group>"; };
+		E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitButtonDuo.swift; sourceTree = "<group>"; };
+		E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedPizza.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +162,7 @@
 		E6B2B8682D48E3E6001D084E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8C92D4A25A5001D084E /* PizzaDetailsScreen */,
 				E6B2B8882D492B7B001D084E /* MainTabBar */,
 				E6B2B87B2D4929C5001D084E /* ShoppingCartScreen */,
 				E6B2B87A2D4929BF001D084E /* UserScreen */,
@@ -204,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */,
+				E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -292,6 +310,11 @@
 		E6B2B89D2D49441F001D084E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */,
+				E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */,
+				E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */,
+				E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */,
+				E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -302,6 +325,15 @@
 				E6B2B8BD2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E6B2B8C92D4A25A5001D084E /* PizzaDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */,
+				E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */,
+			);
+			path = PizzaDetailsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,20 +420,26 @@
 				E6B2B8812D492A0D001D084E /* UserViewController.swift in Sources */,
 				E6B2B8C22D497A2C001D084E /* GetPizzasCatalogRepository.swift in Sources */,
 				E6B2B88A2D492B8B001D084E /* MainTabBarController.swift in Sources */,
+				E6B2B8D92D4AB99D001D084E /* OrderedPizza.swift in Sources */,
+				E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */,
 				E6B2B8522D48E2E8001D084E /* AppDelegate.swift in Sources */,
 				E6B2B8C62D497D0C001D084E /* GetPizzasCatalogUseCase.swift in Sources */,
 				E6B2B8542D48E2E8001D084E /* SceneDelegate.swift in Sources */,
+				E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */,
 				E6B2B89A2D494131001D084E /* SignInViewController.swift in Sources */,
+				E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */,
 				E6B2B8852D492A2B001D084E /* ShoppingCartViewController.swift in Sources */,
 				E6B2B86B2D48E3FF001D084E /* AppRouter.swift in Sources */,
 				E6B2B8B92D4973D2001D084E /* BaseURL.swift in Sources */,
 				E6B2B89C2D49413A001D084E /* SignInViewModel.swift in Sources */,
 				E6B2B8C82D497EEE001D084E /* PizzasEntity.swift in Sources */,
 				E6B2B8BE2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift in Sources */,
+				E6B2B8D32D4A6FFE001D084E /* SupplementCell.swift in Sources */,
 				E6B2B86D2D48E409001D084E /* MainViewController.swift in Sources */,
 				E6B2B8B52D49739D001D084E /* HTTPClient.swift in Sources */,
 				E6B2B87F2D4929FF001D084E /* OrderViewModel.swift in Sources */,
 				E6B2B8BB2D49747C001D084E /* AlamofireHTTPClient.swift in Sources */,
+				E6B2B8CB2D4A25BE001D084E /* PizzaDetailsViewController.swift in Sources */,
 				E6B2B8872D492A36001D084E /* ShoppingCartViewModel.swift in Sources */,
 				E6B2B8832D492A18001D084E /* UserViewModel.swift in Sources */,
 				E6B2B8B72D4973C0001D084E /* APIEndpoint.swift in Sources */,
@@ -409,6 +447,8 @@
 				E6B2B8C42D497BF4001D084E /* EmptyRequestModel.swift in Sources */,
 				E6B2B8B32D4971CB001D084E /* PizzasResponse.swift in Sources */,
 				E6B2B87D2D4929F3001D084E /* OrderViewController.swift in Sources */,
+				E6B2B8CD2D4A25C5001D084E /* PizzaDetailsViewModel.swift in Sources */,
+				E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
