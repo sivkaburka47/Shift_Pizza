@@ -23,6 +23,18 @@ class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        
+        view.backgroundColor = UIColor(named: "White")
+        let label = UILabel()
+        label.text = "В разработке..."
+        label.textColor = UIColor(named: "Tertiary")
+        label.font = .systemFont(ofSize: 28, weight: .semibold)
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        
+        label.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
     }
 }

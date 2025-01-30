@@ -110,6 +110,7 @@ class PizzaDetailsViewController: UIViewController {
         supplementsCollectionView.delegate = self
         
         confirmButton.setTitle("В корзину за \(viewModel.pizza.sizes.first?.price ?? 0) ₽", for: .normal)
+        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
         
         imageView.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.top).offset(24)
@@ -261,6 +262,10 @@ extension PizzaDetailsViewController: UICollectionViewDelegate {
         if let cell = collectionView.cellForItem(at: indexPath) as? SupplementCell {
             cell.toggleSelection()
         }
+    }
+
+    @objc private func confirmButtonTapped() {
+        viewModel.saveOrderToUserDefaults()
     }
 
 

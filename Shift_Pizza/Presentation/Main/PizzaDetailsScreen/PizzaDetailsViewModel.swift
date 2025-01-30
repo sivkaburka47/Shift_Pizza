@@ -8,12 +8,17 @@
 import Foundation
 
 class PizzaDetailsViewModel {
+    
+    weak var appRouterDelegate: AppRouterDelegate?
+    
     let pizza: PizzaEntity
     var pizzaOrder: OrderedPizza
     var selectedSupplements = Set<String>()
     
     var onTextUpdate: ((String) -> Void)?
     var totalPriceUpdate: ((String) -> Void)?
+    
+    let ordersKey = "savedPizzaOrders"
     
     init(pizza: PizzaEntity) {
         self.pizza = pizza
@@ -27,7 +32,8 @@ class PizzaDetailsViewModel {
             toppings: [],
             size: OrderedPizzaSize(name: defaultSize.name, price: defaultSize.price),
             doughs: OrderedPizzaDough(name: defaultDough.name, price: defaultDough.price),
-            totalPrice: defaultSize.price
+            totalPrice: defaultSize.price,
+            img: pizza.img
         )
     }
     
@@ -55,7 +61,8 @@ class PizzaDetailsViewModel {
                 toppings: pizzaOrder.toppings,
                 size: OrderedPizzaSize(name: selectedSize.name, price: selectedSize.price),
                 doughs: pizzaOrder.doughs,
-                totalPrice: pizzaOrder.totalPrice
+                totalPrice: pizzaOrder.totalPrice,
+                img: pizzaOrder.img
             )
             onTextUpdate?("\(pizzaOrder.size.sizeInCm), \(pizzaOrder.doughs.doughsInStr)")
         }
@@ -71,7 +78,8 @@ class PizzaDetailsViewModel {
                 toppings: pizzaOrder.toppings,
                 size: pizzaOrder.size,
                 doughs: OrderedPizzaDough(name: selectedDough.name, price: selectedDough.price),
-                totalPrice: pizzaOrder.totalPrice
+                totalPrice: pizzaOrder.totalPrice,
+                img: pizzaOrder.img
             )
             onTextUpdate?("\(pizzaOrder.size.sizeInCm), \(pizzaOrder.doughs.doughsInStr)")
         }
@@ -100,6 +108,37 @@ class PizzaDetailsViewModel {
         
         print("Общая стоимость: \(pizzaOrder.totalPrice) ₽")
         print("------")
+    }
+    
+    func saveOrderToUserDefaults() {
+        let defaults = UserDefaults.standard
+        var savedOrders = loadOrdersFromUserDefaults()
+
+        savedOrders.append(pizzaOrder)
+
+        if let encodedData = try? JSONEncoder().encode(savedOrders) {
+            defaults.set(encodedData, forKey: ordersKey)
+        }
+
+        appRouterDelegate?.dismissPresentedViewController()
+    }
+
+
+    private func calculateTotalPrice(_ order: OrderedPizza) -> Int {
+        let toppingsCost = order.toppings.reduce(0) { $0 + $1.cost }
+        return order.size.price + order.doughs.price + toppingsCost
+    }
+
+
+    func loadOrdersFromUserDefaults() -> [OrderedPizza] {
+        let defaults = UserDefaults.standard
+
+        if let savedData = defaults.data(forKey: ordersKey),
+           let decodedOrders = try? JSONDecoder().decode([OrderedPizza].self, from: savedData) {
+            return decodedOrders
+        }
+        
+        return []
     }
 
 }

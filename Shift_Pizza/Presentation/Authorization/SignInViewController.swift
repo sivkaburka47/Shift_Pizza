@@ -11,6 +11,7 @@ import SnapKit
 class SignInViewController: UIViewController {
     
     private let viewModel: SignInViewModel
+    private let signInButton = LargeCustomButton(style: .orange)
 
     init(viewModel: SignInViewModel) {
         self.viewModel = viewModel
@@ -25,19 +26,15 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Sign In"
-        let signInButton = UIButton(type: .system)
-        signInButton.setTitle("Sign In", for: .normal)
+        signInButton.setTitle("Войти", for: .normal)
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
         
         view.addSubview(signInButton)
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        signInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         signInButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
     }
 

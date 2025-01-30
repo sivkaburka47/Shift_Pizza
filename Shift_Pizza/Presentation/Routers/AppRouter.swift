@@ -11,6 +11,7 @@ protocol AppRouterDelegate: AnyObject {
     func navigateToSignIn()
     func navigateToMain()
     func navigateToPizzaDetails(pizza: PizzaEntity)
+    func dismissPresentedViewController()
 }
 
 final class AppRouter: AppRouterDelegate {
@@ -53,6 +54,11 @@ extension AppRouter {
         viewController.present(navigationController, animated: true)
         
     }
+    
+    func dismissPresentedViewController() {
+        guard let viewController = window?.rootViewController?.presentedViewController else { return }
+        viewController.dismiss(animated: true)
+    }
 
 }
 
@@ -69,6 +75,7 @@ extension AppRouter {
     
     private func createPizzaDetailsViewController(pizza: PizzaEntity) -> PizzaDetailsViewController {
         let pizzaDetailsViewModel = PizzaDetailsViewModel(pizza: pizza)
+        pizzaDetailsViewModel.appRouterDelegate = self
         let pizzaDetailsViewController = PizzaDetailsViewController(viewModel: pizzaDetailsViewModel)
         return pizzaDetailsViewController
     }

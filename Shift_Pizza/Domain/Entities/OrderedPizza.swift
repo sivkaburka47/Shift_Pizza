@@ -14,6 +14,8 @@ struct OrderedPizza: Codable {
     var size: OrderedPizzaSize
     var doughs: OrderedPizzaDough
     var totalPrice: Int
+    var img: String
+    var quantity: Int = 1
 }
 
 struct OrderedPizzaIngredient: Codable {
@@ -77,6 +79,19 @@ struct OrderedPizzaSize: Codable {
             return "30 см"
         case "LARGE":
             return "35 см"
+        default:
+            return "Unknown"
+        }
+    }
+    
+    var sizeInCmFull: String {
+        switch name {
+        case "SMALL":
+            return "Маленькая 25 см"
+        case "MEDIUM":
+            return "Средняя 30 см"
+        case "LARGE":
+            return "Большая 35 см"
         default:
             return "Unknown"
         }
