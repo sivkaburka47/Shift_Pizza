@@ -66,8 +66,10 @@ final class LargeCustomButton: UIButton {
             isUserInteractionEnabled = true
             
         case .inactive:
-            backgroundColor = .darkGray
-            setTitleColor(.black, for: .normal)
+            backgroundColor = .white
+            setTitleColor(UIColor(named: "Secondary"), for: .normal)
+            layer.borderWidth = 1.0
+            layer.borderColor = UIColor(named: "IndicatorLight")?.cgColor
             isUserInteractionEnabled = false
         }
     }
