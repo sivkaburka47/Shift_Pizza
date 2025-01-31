@@ -137,8 +137,8 @@ extension MainTabBarController: MainViewModelDelegate, ShoppingCartViewModelDele
         appRouterDelegate?.navigateToPersonalData(vc: cartViewController)
     }
     
-    func navigateToPaymentCard(vc: UIViewController) {
-        appRouterDelegate?.navigateToPaymentCard(vc: vc)
+    func navigateToPaymentCard(vc: UIViewController, person: PersonEntity, address: ReceiverAddressEntity) {
+        appRouterDelegate?.navigateToPaymentCard(vc: vc, person: person, address: address)
     }
 
 }

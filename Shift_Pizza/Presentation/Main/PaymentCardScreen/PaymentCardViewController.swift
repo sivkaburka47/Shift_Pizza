@@ -172,7 +172,10 @@ class PaymentCardViewController: UIViewController {
     }
     
     @objc private func confirmButtonTapped() {
+
         viewModel.confirmButtonTapped()
+
+        
     }
     
     @objc private func cardNumberChanged(_ textField: UITextField) {

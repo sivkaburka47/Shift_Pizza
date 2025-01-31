@@ -13,7 +13,7 @@ protocol AppRouterDelegate: AnyObject {
     func navigateToPizzaDetails(pizza: PizzaEntity)
     func dismissPresentedViewController()
     func navigateToPersonalData(vc: UIViewController)
-    func navigateToPaymentCard(vc: UIViewController)
+    func navigateToPaymentCard(vc: UIViewController, person: PersonEntity, address: ReceiverAddressEntity)
 }
 
 final class AppRouter: AppRouterDelegate {
@@ -65,8 +65,8 @@ extension AppRouter {
         vc.navigationController?.pushViewController(pesonalDataViewController, animated: true)
     }
     
-    func navigateToPaymentCard(vc: UIViewController) {
-        let paymentCardViewController = createPaymentCardViewController()
+    func navigateToPaymentCard(vc: UIViewController, person: PersonEntity, address: ReceiverAddressEntity) {
+        let paymentCardViewController = createPaymentCardViewController(person: person, address: address)
 //        guard let navigationController = (window?.rootViewController as? UITabBarController)?
 //            .selectedViewController as? UINavigationController else { return }
         setupNavigationBar(for: paymentCardViewController, title: "Карта оплаты", isPresent: false)
@@ -109,8 +109,8 @@ extension AppRouter {
         return personalDataViewController
     }
     
-    private func createPaymentCardViewController() -> PaymentCardViewController {
-        let paymentCardViewModel = PaymentCardViewModel()
+    private func createPaymentCardViewController(person: PersonEntity, address: ReceiverAddressEntity) -> PaymentCardViewController {
+        let paymentCardViewModel = PaymentCardViewModel(person: person,  address: address)
         paymentCardViewModel.appRouterDelegate = self
         let paymentCardViewController = PaymentCardViewController(viewModel: paymentCardViewModel)
         paymentCardViewModel.uiViewController = paymentCardViewController

@@ -14,7 +14,7 @@ protocol ShoppingCartViewModelDelegate: AnyObject {
 class ShoppingCartViewModel {
     weak var delegate: ShoppingCartViewModelDelegate?
     
-    private(set) var orders: [OrderedPizza] = []
+    private(set) var orders: [OrderedPizzaEntity] = []
     
     var onCartUpdated: (() -> Void)?
     
@@ -22,7 +22,7 @@ class ShoppingCartViewModel {
         loadOrders()
     }
     
-    func getOrders() -> [OrderedPizza] {
+    func getOrders() -> [OrderedPizzaEntity] {
         return orders
     }
     
@@ -34,7 +34,7 @@ class ShoppingCartViewModel {
         }
         
         do {
-            let decodedOrders = try JSONDecoder().decode([OrderedPizza].self, from: data)
+            let decodedOrders = try JSONDecoder().decode([OrderedPizzaEntity].self, from: data)
             orders = decodedOrders
             print("Загруженные заказы: \(orders)")
         } catch {

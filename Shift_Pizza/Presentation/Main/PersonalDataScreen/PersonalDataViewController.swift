@@ -21,9 +21,13 @@ class PersonalDataViewController: UIViewController {
     
     private let lastNameField = FormTextField()
     private let firstNameField = FormTextField()
+    private let middleNameField = FormTextField()
     private let phoneField = FormTextField()
-    private let emailField = FormTextField()
-    private let cityField = FormTextField()
+    
+    private let streetField = FormTextField()
+    private let houseField = FormTextField()
+    private let apartmentField = FormTextField()
+    private let commentField = FormTextField()
     
     init(viewModel: PersonalDataViewModel) {
         self.viewModel = viewModel
@@ -63,8 +67,8 @@ class PersonalDataViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         
-        [stepLabel, lastNameField, firstNameField,
-         phoneField, emailField, cityField].forEach {
+        [stepLabel, lastNameField, firstNameField, middleNameField,
+         phoneField, streetField, houseField, apartmentField, commentField].forEach {
             contentView.addSubview($0)
         }
         
@@ -113,21 +117,37 @@ class PersonalDataViewController: UIViewController {
             make.left.right.equalToSuperview().inset(16)
         }
         
-        phoneField.snp.makeConstraints { make in
+        middleNameField.snp.makeConstraints { make in
             make.top.equalTo(firstNameField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(16)
         }
         
-        emailField.snp.makeConstraints { make in
-            make.top.equalTo(phoneField.snp.bottom).offset(16)
+        phoneField.snp.makeConstraints { make in
+            make.top.equalTo(middleNameField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(16)
         }
         
-        cityField.snp.makeConstraints { make in
-            make.top.equalTo(emailField.snp.bottom).offset(16)
+        streetField.snp.makeConstraints { make in
+            make.top.equalTo(phoneField.snp.bottom).offset(24)
             make.left.right.equalToSuperview().inset(16)
-            make.bottom.equalToSuperview().inset(24)
         }
+        
+        houseField.snp.makeConstraints { make in
+            make.top.equalTo(streetField.snp.bottom).offset(16)
+            make.left.right.equalToSuperview().inset(16)
+        }
+        
+        apartmentField.snp.makeConstraints { make in
+            make.top.equalTo(houseField.snp.bottom).offset(16)
+            make.left.right.equalToSuperview().inset(16)
+        }
+        
+        commentField.snp.makeConstraints { make in
+            make.top.equalTo(apartmentField.snp.bottom).offset(16)
+            make.left.right.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview().inset(20)
+        }
+        
         
         confirmButton.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(16)
@@ -139,9 +159,12 @@ class PersonalDataViewController: UIViewController {
     private func setupTextFields() {
         configureTextField(lastNameField, title: "Фамилия*", placeholder: "Фамилия")
         configureTextField(firstNameField, title: "Имя*", placeholder: "Имя")
+        configureTextField(middleNameField, title: "Отчество (при наличии)", placeholder: "Отчество")
         configureTextField(phoneField, title: "Номер телефона*", placeholder: "Номер телефона", keyboardType: .phonePad)
-        configureTextField(emailField, title: "Email*", placeholder: "Email", keyboardType: .emailAddress)
-        configureTextField(cityField, title: "Город*", placeholder: "Город")
+        configureTextField(streetField, title: "Улица*", placeholder: "Название улицы")
+        configureTextField(houseField, title: "Дом*", placeholder: "Номер дома", keyboardType: .numberPad)
+        configureTextField(apartmentField, title: "Квартира*", placeholder: "Номер квартиры")
+        configureTextField(commentField, title: "Комментарий", placeholder: "Дополнительная информация")
     }
     
     
@@ -157,18 +180,28 @@ class PersonalDataViewController: UIViewController {
     private func configureTextFields() {
         lastNameField.textField.delegate = self
         firstNameField.textField.delegate = self
+        middleNameField.textField.delegate = self
         phoneField.textField.delegate = self
-        emailField.textField.delegate = self
-        cityField.textField.delegate = self
+        
+        streetField.textField.delegate = self
+        houseField.textField.delegate = self
+        apartmentField.textField.delegate = self
+        commentField.textField.delegate = self
         
         lastNameField.textField.addTarget(self, action: #selector(lastNameTextFieldChanged), for: .editingChanged)
         firstNameField.textField.addTarget(self, action: #selector(firstNameTextFieldChanged), for: .editingChanged)
         phoneField.textField.addTarget(self, action: #selector(phoneTextFieldChanged), for: .editingChanged)
-        emailField.textField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
-        cityField.textField.addTarget(self, action: #selector(cityTextFieldChanged), for: .editingChanged)
+        middleNameField.textField.addTarget(self, action: #selector(middleNameTextFieldChanged), for: .editingChanged)
         
         phoneField.textField.addTarget(self, action: #selector(phoneTextFieldDidChange), for: .editingChanged)
+        
+        streetField.textField.addTarget(self, action: #selector(streetTextFieldChanged), for: .editingChanged)
+        houseField.textField.addTarget(self, action: #selector(houseTextFieldChanged), for: .editingChanged)
+        apartmentField.textField.addTarget(self, action: #selector(apartmentTextFieldChanged), for: .editingChanged)
+        commentField.textField.addTarget(self, action: #selector(commentTextFieldChanged), for: .editingChanged)
     }
+    
+
     
     private func setupActions() {
         confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
@@ -181,22 +214,35 @@ class PersonalDataViewController: UIViewController {
     @objc private func lastNameTextFieldChanged(_ textField: UITextField) {
         viewModel.updateLastname(textField.text ?? "")
     }
-
+    
     @objc private func firstNameTextFieldChanged(_ textField: UITextField) {
         viewModel.updateFirstname(textField.text ?? "")
     }
-
+    
+    @objc private func middleNameTextFieldChanged(_ textField: UITextField) {
+        viewModel.updateMiddlename(textField.text ?? "")
+    }
+    
     @objc private func phoneTextFieldChanged(_ textField: UITextField) {
         viewModel.updatePhone(textField.text ?? "")
     }
 
-    @objc private func emailTextFieldChanged(_ textField: UITextField) {
-        viewModel.updateEmail(textField.text ?? "")
+    @objc private func streetTextFieldChanged(_ textField: UITextField) {
+        viewModel.updateStreet(textField.text ?? "")
+    }
+    
+    @objc private func houseTextFieldChanged(_ textField: UITextField) {
+        viewModel.updateHouse(textField.text ?? "")
+    }
+    
+    @objc private func apartmentTextFieldChanged(_ textField: UITextField) {
+        viewModel.updateApartment(textField.text ?? "")
+    }
+    
+    @objc private func commentTextFieldChanged(_ textField: UITextField) {
+        viewModel.updateComment(textField.text ?? "")
     }
 
-    @objc private func cityTextFieldChanged(_ textField: UITextField) {
-        viewModel.updateCity(textField.text ?? "")
-    }
 
     @objc private func phoneTextFieldDidChange(_ textField: UITextField) {
         guard var text = textField.text else { return }

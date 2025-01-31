@@ -10,8 +10,7 @@ import Foundation
 struct PersonEntity: Codable {
     var firstname: String
     var lastname: String
-    var email: String
+    var middlename: String
     var phone: String
-    var city: String
 }
 

@@ -18,6 +18,19 @@ class PaymentCardViewModel {
     private var expiryDate: String = ""
     private var cvv: String = ""
     
+    let person: PersonEntity
+    
+    let address: ReceiverAddressEntity
+    
+    private let payForOrderUseCase: PayForOrderUseCase
+    
+    
+    init(person: PersonEntity, address: ReceiverAddressEntity) {
+        self.person = person
+        self.address = address
+        self.payForOrderUseCase = PayForOrderUseCaseImpl.create()
+    }
+    
     private var isCardNumberValid: Bool = false {
         didSet { validateFields() }
     }
@@ -46,9 +59,77 @@ class PaymentCardViewModel {
     }
     
     func confirmButtonTapped() {
+        
+        guard let data = UserDefaults.standard.data(forKey: "savedPizzaOrders") else {
+            return
+        }
+        
+        var orders: [OrderedPizzaEntity] = []
+        
+        do {
+            let decodedOrders = try JSONDecoder().decode([OrderedPizzaEntity].self, from: data)
+            orders = decodedOrders
+        } catch {
+            print("Ошибка декодирования: \(error)")
+            return
+        }
+        
+        let receiverAddress = ReceiverAddress(
+            street: address.street,
+            house: address.house,
+            apartment: address.apartment,
+            comment: address.comment
+        )
+        
+        let person = Person(
+            firstname: person.firstname,
+            lastname: person.lastname,
+            middlename: person.middlename,
+            phone: person.phone
+        )
+        
+
+        let debitCard = DebitCard(
+            pan: cardNumber,
+            expireDate: expiryDate,
+            cvv: cvv
+        )
+        
+        var pizzas: [OrderedPizza] = []
+        
+        orders.forEach { pizza in
+            for _ in 0..<pizza.quantity {
+                pizzas.append(
+                    OrderedPizza(
+                        id: pizza.id,
+                        name: pizza.name,
+                        toppings: pizza.toppings.map { OrderedPizzaIngredient(name: $0.name, cost: Double($0.cost)) },
+                        size: PizzaSize(name: pizza.size.name, price: pizza.size.price),
+                        doughs: PizzaDough(name: pizza.doughs.name, price: pizza.doughs.price)
+                    )
+                )
+            }
+        }
+
+        let pizzaPayment = CreatePizzaPaymentDto(
+            receiverAddress: receiverAddress,
+            person: person,
+            debitCard: debitCard,
+            pizzas: pizzas
+        )
+        Task {
+            do {
+                let paymentOrder = try await payForOrderUseCase.execute(request: pizzaPayment)
+                print("Ответ \(paymentOrder.success)")
+            } catch {
+                print("Ошибка при оплате: \(error)")
+            }
+        }
+
         guard let vc = uiViewController else { return }
 //        appRouterDelegate?.navigateToOrderConfirmation(vc: vc)
     }
+    
     
     private func validateFields() {
         let isValid = isCardNumberValid && isExpiryDateValid && isCVVValid

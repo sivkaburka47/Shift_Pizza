@@ -13,6 +13,7 @@ class PersonalDataViewModel {
     weak var uiViewController: UIViewController?
     
     var person: PersonEntity
+    var address: ReceiverAddressEntity
     
     var isConfirmButtonActive: ((Bool) -> Void)?
     
@@ -28,7 +29,7 @@ class PersonalDataViewModel {
         }
     }
     
-    var isEmailValid: Bool = false {
+    var isMiddlenameValid: Bool = false {
         didSet {
             validateFields()
         }
@@ -40,23 +41,48 @@ class PersonalDataViewModel {
         }
     }
     
-    var isCityValid: Bool = false {
+    var isStreetValid: Bool = false {
         didSet {
             validateFields()
         }
     }
     
+    var isHouseValid: Bool = false {
+        didSet {
+            validateFields()
+        }
+    }
+    
+    var isApartmentValid: Bool = false {
+        didSet {
+            validateFields()
+        }
+    }
+    
+    var isAddressValid: Bool = false {
+        didSet {
+            validateFields()
+        }
+    }
+    
+
+    
     init() {
         self.person = PersonEntity(firstname: "",
                                    lastname: "",
-                                   email: "",
-                                   phone: "",
-                                   city: "")
+                                   middlename: "",
+                                   phone: "")
+        
+        self.address = ReceiverAddressEntity(street: "",
+                                             house: "",
+                                             apartment: "",
+                                             comment: "")
     }
     
     func confirmButtonTapped() {
+        print("Вызван в viewCOntroller")
         guard let vc = uiViewController else { return }
-        appRouterDelegate?.navigateToPaymentCard(vc: vc)
+        appRouterDelegate?.navigateToPaymentCard(vc: vc, person: person, address: address)
     }
     
     
@@ -71,9 +97,9 @@ class PersonalDataViewModel {
         isLastnameValid = !lastname.isEmpty
         validateFields()
     }
-    func updateEmail(_ email: String) {
-        self.person.email = email
-        isEmailValid = !email.isEmpty
+    func updateMiddlename(_ middlename: String) {
+        self.person.middlename = middlename
+        isMiddlenameValid = !middlename.isEmpty
         validateFields()
     }
     
@@ -83,28 +109,46 @@ class PersonalDataViewModel {
         validateFields()
     }
     
-    func updateCity(_ city: String) {
-        self.person.city = city
-        isCityValid = !city.isEmpty
+    func updateStreet(_ street: String) {
+        self.address.street = street
+        isStreetValid = !street.isEmpty
         validateFields()
     }
+    
+    func updateHouse(_ house: String) {
+        self.address.house = house
+        isHouseValid = !house.isEmpty
+        validateFields()
+    }
+    
+    func updateApartment(_ apartment: String) {
+        self.address.apartment = apartment
+        isApartmentValid = !apartment.isEmpty
+        validateFields()
+    }
+    
+    func updateComment(_ comment: String) {
+        self.address.comment = comment
+        isAddressValid = !comment.isEmpty
+        validateFields()
+    }
+    
     
     private func validateFields() {
         let isFirstnameValid = self.isFirstnameValid
         let isLastnameValid = self.isLastnameValid
-        let isEmailValid = self.isEmailValid
+        let isMiddlenameValid = self.isMiddlenameValid
         let isPhoneValid = self.isPhoneValid
-        let isCityValid = self.isCityValid
         
-        let isValid = isFirstnameValid && isLastnameValid && isEmailValid && isPhoneValid && isCityValid
+        let isStreetValid = self.isStreetValid
+        let isHouseValid = self.isHouseValid
+        let isApartmentValid = self.isApartmentValid
+        let isAddressValid = self.isAddressValid
+        
+        let isValid = isFirstnameValid && isLastnameValid && isMiddlenameValid && isPhoneValid && isStreetValid && isHouseValid && isApartmentValid && isAddressValid
         isConfirmButtonActive?(isValid)
     }
     
-    private func  isValidEmail(_ input: String) -> Bool {
-        let regularExpression = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", regularExpression)
-        return predicate.evaluate(with: input)
-    }
     
     private func isValidLatinCharacters(_ input: String) -> Bool {
         let regularExpression = "^[A-Za-z0-9#?!@$%^&*-]+$"

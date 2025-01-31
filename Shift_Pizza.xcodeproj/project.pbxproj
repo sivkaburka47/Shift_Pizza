@@ -44,13 +44,20 @@
 		E6B2B8D32D4A6FFE001D084E /* SupplementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */; };
 		E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */; };
 		E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */; };
-		E6B2B8D92D4AB99D001D084E /* OrderedPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */; };
+		E6B2B8D92D4AB99D001D084E /* OrderedPizzaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */; };
 		E6B2B8E22D4BD0D3001D084E /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E12D4BD0D3001D084E /* PersonalDataViewController.swift */; };
 		E6B2B8E42D4BD0DB001D084E /* PersonalDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E32D4BD0DB001D084E /* PersonalDataViewModel.swift */; };
 		E6B2B8E72D4BE8B2001D084E /* PaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E62D4BE8B2001D084E /* PaymentCardViewController.swift */; };
 		E6B2B8E92D4BE8BC001D084E /* PaymentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E82D4BE8BC001D084E /* PaymentCardViewModel.swift */; };
 		E6B2B8EE2D4CA705001D084E /* PersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */; };
 		E6B2B8F02D4CD8FC001D084E /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8EF2D4CD8FC001D084E /* FormTextField.swift */; };
+		E6B2B8F22D4D2061001D084E /* ReceiverAddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */; };
+		E6B2B8F42D4D3AFC001D084E /* CreatePizzaPaymentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */; };
+		E6B2B8F62D4D4550001D084E /* PayForOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */; };
+		E6B2B8F82D4D46C4001D084E /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */; };
+		E6B2B8FA2D4D489E001D084E /* PayOrderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */; };
+		E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */; };
+		E6B2B8FE2D4D4AC3001D084E /* PizzaPaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,13 +97,20 @@
 		E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementCell.swift; sourceTree = "<group>"; };
 		E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCustomButton.swift; sourceTree = "<group>"; };
 		E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitButtonDuo.swift; sourceTree = "<group>"; };
-		E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedPizza.swift; sourceTree = "<group>"; };
+		E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedPizzaEntity.swift; sourceTree = "<group>"; };
 		E6B2B8E12D4BD0D3001D084E /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
 		E6B2B8E32D4BD0DB001D084E /* PersonalDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewModel.swift; sourceTree = "<group>"; };
 		E6B2B8E62D4BE8B2001D084E /* PaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewController.swift; sourceTree = "<group>"; };
 		E6B2B8E82D4BE8BC001D084E /* PaymentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewModel.swift; sourceTree = "<group>"; };
 		E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEntity.swift; sourceTree = "<group>"; };
 		E6B2B8EF2D4CD8FC001D084E /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverAddressEntity.swift; sourceTree = "<group>"; };
+		E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePizzaPaymentDto.swift; sourceTree = "<group>"; };
+		E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForOrderUseCase.swift; sourceTree = "<group>"; };
+		E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrderEndPoint.swift; sourceTree = "<group>"; };
+		E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryImpl.swift; sourceTree = "<group>"; };
+		E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPaymentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8C12D497A2C001D084E /* GetPizzasCatalogRepository.swift */,
+				E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -227,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */,
+				E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -235,8 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */,
-				E6B2B8D82D4AB99D001D084E /* OrderedPizza.swift */,
+				E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */,
 				E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */,
+				E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -245,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8BF2D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift */,
+				E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -252,8 +270,10 @@
 		E6B2B8762D4925F8001D084E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */,
 				E6B2B8B22D4971CB001D084E /* PizzasResponse.swift */,
 				E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */,
+				E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B2B8BD2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift */,
+				E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -454,7 +475,7 @@
 				E6B2B8812D492A0D001D084E /* UserViewController.swift in Sources */,
 				E6B2B8C22D497A2C001D084E /* GetPizzasCatalogRepository.swift in Sources */,
 				E6B2B88A2D492B8B001D084E /* MainTabBarController.swift in Sources */,
-				E6B2B8D92D4AB99D001D084E /* OrderedPizza.swift in Sources */,
+				E6B2B8D92D4AB99D001D084E /* OrderedPizzaEntity.swift in Sources */,
 				E6B2B8E72D4BE8B2001D084E /* PaymentCardViewController.swift in Sources */,
 				E6B2B8E92D4BE8BC001D084E /* PaymentCardViewModel.swift in Sources */,
 				E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */,
@@ -464,8 +485,13 @@
 				E6B2B8542D48E2E8001D084E /* SceneDelegate.swift in Sources */,
 				E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */,
 				E6B2B89A2D494131001D084E /* SignInViewController.swift in Sources */,
+				E6B2B8F22D4D2061001D084E /* ReceiverAddressEntity.swift in Sources */,
+				E6B2B8F62D4D4550001D084E /* PayForOrderUseCase.swift in Sources */,
+				E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */,
 				E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */,
+				E6B2B8F82D4D46C4001D084E /* OrderRepository.swift in Sources */,
 				E6B2B8852D492A2B001D084E /* ShoppingCartViewController.swift in Sources */,
+				E6B2B8FE2D4D4AC3001D084E /* PizzaPaymentResponse.swift in Sources */,
 				E6B2B86B2D48E3FF001D084E /* AppRouter.swift in Sources */,
 				E6B2B8B92D4973D2001D084E /* BaseURL.swift in Sources */,
 				E6B2B89C2D49413A001D084E /* SignInViewModel.swift in Sources */,
@@ -481,11 +507,13 @@
 				E6B2B8872D492A36001D084E /* ShoppingCartViewModel.swift in Sources */,
 				E6B2B8832D492A18001D084E /* UserViewModel.swift in Sources */,
 				E6B2B8E42D4BD0DB001D084E /* PersonalDataViewModel.swift in Sources */,
+				E6B2B8F42D4D3AFC001D084E /* CreatePizzaPaymentDto.swift in Sources */,
 				E6B2B8B72D4973C0001D084E /* APIEndpoint.swift in Sources */,
 				E6B2B8C02D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift in Sources */,
 				E6B2B8C42D497BF4001D084E /* EmptyRequestModel.swift in Sources */,
 				E6B2B8B32D4971CB001D084E /* PizzasResponse.swift in Sources */,
 				E6B2B87D2D4929F3001D084E /* OrderViewController.swift in Sources */,
+				E6B2B8FA2D4D489E001D084E /* PayOrderEndPoint.swift in Sources */,
 				E6B2B8CD2D4A25C5001D084E /* PizzaDetailsViewModel.swift in Sources */,
 				E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */,
 				E6B2B8EE2D4CA705001D084E /* PersonEntity.swift in Sources */,

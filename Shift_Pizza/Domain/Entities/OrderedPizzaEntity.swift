@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct OrderedPizza: Codable {
+struct OrderedPizzaEntity: Codable {
     var id: String
     var name: String
-    var toppings: [OrderedPizzaIngredient]
-    var size: OrderedPizzaSize
-    var doughs: OrderedPizzaDough
+    var toppings: [OrderedPizzaIngredientEntity]
+    var size: OrderedPizzaSizeEntity
+    var doughs: OrderedPizzaDoughEntity
     var totalPrice: Int
     var img: String
     var quantity: Int = 1
 }
 
-struct OrderedPizzaIngredient: Codable {
+struct OrderedPizzaIngredientEntity: Codable {
     let name: String
     let cost: Int
     
@@ -67,7 +67,7 @@ struct OrderedPizzaIngredient: Codable {
 }
 
 
-struct OrderedPizzaSize: Codable {
+struct OrderedPizzaSizeEntity: Codable {
     let name: String
     let price: Int
     
@@ -98,7 +98,7 @@ struct OrderedPizzaSize: Codable {
     }
 }
 
-struct OrderedPizzaDough: Codable {
+struct OrderedPizzaDoughEntity: Codable {
     let name: String
     let price: Int
     

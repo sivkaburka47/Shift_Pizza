@@ -12,7 +12,7 @@ class PizzaDetailsViewModel {
     weak var appRouterDelegate: AppRouterDelegate?
     
     let pizza: PizzaEntity
-    var pizzaOrder: OrderedPizza
+    var pizzaOrder: OrderedPizzaEntity
     var selectedSupplements = Set<String>()
     
     var onTextUpdate: ((String) -> Void)?
@@ -26,12 +26,12 @@ class PizzaDetailsViewModel {
         let defaultSize = pizza.sizes.first ?? PizzaSizeEntity(name: "SMALL", price: 0)
         let defaultDough = pizza.doughs.first ?? PizzaDoughEntity(name: "THIN", price: 0)
         
-        self.pizzaOrder = OrderedPizza(
+        self.pizzaOrder = OrderedPizzaEntity(
             id: pizza.id,
             name: pizza.name,
             toppings: [],
-            size: OrderedPizzaSize(name: defaultSize.name, price: defaultSize.price),
-            doughs: OrderedPizzaDough(name: defaultDough.name, price: defaultDough.price),
+            size: OrderedPizzaSizeEntity(name: defaultSize.name, price: defaultSize.price),
+            doughs: OrderedPizzaDoughEntity(name: defaultDough.name, price: defaultDough.price),
             totalPrice: defaultSize.price,
             img: pizza.img
         )
@@ -45,7 +45,7 @@ class PizzaDetailsViewModel {
         if let index = pizzaOrder.toppings.firstIndex(where: { $0.name == supplement.name }) {
             pizzaOrder.toppings.remove(at: index)
         } else {
-            let orderedSupplement = OrderedPizzaIngredient(name: supplement.name, cost: supplement.cost)
+            let orderedSupplement = OrderedPizzaIngredientEntity(name: supplement.name, cost: supplement.cost)
             pizzaOrder.toppings.append(orderedSupplement)
         }
         printPizzaOrder()
@@ -55,11 +55,11 @@ class PizzaDetailsViewModel {
     
     func updateSize(_ size: String) {
         if let selectedSize = pizza.sizes.first(where: { $0.name == size }) {
-            pizzaOrder = OrderedPizza(
+            pizzaOrder = OrderedPizzaEntity(
                 id: pizzaOrder.id,
                 name: pizzaOrder.name,
                 toppings: pizzaOrder.toppings,
-                size: OrderedPizzaSize(name: selectedSize.name, price: selectedSize.price),
+                size: OrderedPizzaSizeEntity(name: selectedSize.name, price: selectedSize.price),
                 doughs: pizzaOrder.doughs,
                 totalPrice: pizzaOrder.totalPrice,
                 img: pizzaOrder.img
@@ -72,12 +72,12 @@ class PizzaDetailsViewModel {
     
     func updateDoughType(_ doughType: String) {
         if let selectedDough = pizza.doughs.first(where: { $0.name == doughType }) {
-            pizzaOrder = OrderedPizza(
+            pizzaOrder = OrderedPizzaEntity(
                 id: pizzaOrder.id,
                 name: pizzaOrder.name,
                 toppings: pizzaOrder.toppings,
                 size: pizzaOrder.size,
-                doughs: OrderedPizzaDough(name: selectedDough.name, price: selectedDough.price),
+                doughs: OrderedPizzaDoughEntity(name: selectedDough.name, price: selectedDough.price),
                 totalPrice: pizzaOrder.totalPrice,
                 img: pizzaOrder.img
             )
@@ -124,17 +124,17 @@ class PizzaDetailsViewModel {
     }
 
 
-    private func calculateTotalPrice(_ order: OrderedPizza) -> Int {
+    private func calculateTotalPrice(_ order: OrderedPizzaEntity) -> Int {
         let toppingsCost = order.toppings.reduce(0) { $0 + $1.cost }
         return order.size.price + order.doughs.price + toppingsCost
     }
 
 
-    func loadOrdersFromUserDefaults() -> [OrderedPizza] {
+    func loadOrdersFromUserDefaults() -> [OrderedPizzaEntity] {
         let defaults = UserDefaults.standard
 
         if let savedData = defaults.data(forKey: ordersKey),
-           let decodedOrders = try? JSONDecoder().decode([OrderedPizza].self, from: savedData) {
+           let decodedOrders = try? JSONDecoder().decode([OrderedPizzaEntity].self, from: savedData) {
             return decodedOrders
         }
         

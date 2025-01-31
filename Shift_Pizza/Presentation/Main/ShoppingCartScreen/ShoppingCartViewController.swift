@@ -110,7 +110,7 @@ class ShoppingCartViewController: UIViewController {
         }
     }
 
-    private func createPizzaCard(for order: OrderedPizza, at index: Int) -> UIView {
+    private func createPizzaCard(for order: OrderedPizzaEntity, at index: Int) -> UIView {
         let cardView = UIView()
         cardView.backgroundColor = .white
 
