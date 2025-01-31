@@ -151,6 +151,7 @@ class PersonalDataViewController: UIViewController {
         field.textField.keyboardType = keyboardType
         field.textField.autocapitalizationType = .none
         field.textField.returnKeyType = .next
+        field.setPlaceholder(placeholder,color: UIColor(named: "Tertiary") )
     }
     
     private func configureTextFields() {
