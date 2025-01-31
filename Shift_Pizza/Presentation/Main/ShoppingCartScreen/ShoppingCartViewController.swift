@@ -46,6 +46,8 @@ class ShoppingCartViewController: UIViewController {
         loadCartItems()
         updateTotalPrice()
     }
+    
+    
 
     
     private func configureTitleLabel() {
@@ -160,7 +162,7 @@ class ShoppingCartViewController: UIViewController {
         editButton.setAttributedTitle(attributedTitle, for: .normal)
 
         let priceLabel = UILabel()
-        priceLabel.text = "\(order.totalPrice) ₽"
+        priceLabel.text = "\(order.totalPrice * order.quantity) ₽"
         priceLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         priceLabel.textColor = UIColor(named: "Primary")
 
@@ -318,14 +320,14 @@ class ShoppingCartViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "ОК", style: .default))
             present(alert, animated: true)
         } else {
-            print("Оформление заказа с \(orders.count) пиццами")
+            viewModel.confirmOrder()
         }
     }
 
 
     private func updateTotalPrice() {
         let orders = viewModel.getOrders()
-        let totalPrice = orders.reduce(0) { $0 + $1.totalPrice }
+        let totalPrice = orders.reduce(0) { $0 + $1.totalPrice * $1.quantity}
         totalPriceLabel.text = "\(totalPrice) ₽"
     }
 

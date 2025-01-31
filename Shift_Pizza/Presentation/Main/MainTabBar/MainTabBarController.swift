@@ -78,6 +78,7 @@ final class MainTabBarController: UITabBarController {
     
     private lazy var cartViewController: ShoppingCartViewController = {
         let viewModel = ShoppingCartViewModel()
+        viewModel.delegate = self
         let controller = ShoppingCartViewController(viewModel: viewModel)
         controller.tabBarItem = UITabBarItem(
             title: TabBarItem.cart.title,
@@ -89,6 +90,7 @@ final class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let cartViewController = UINavigationController(rootViewController: cartViewController)
         setViewControllers([mainViewController, orderViewController, userViewController, cartViewController], animated: false)
         selectedIndex = 0
         setupTabBarAppearance()
@@ -126,11 +128,14 @@ final class MainTabBarController: UITabBarController {
 }
 
 
-extension MainTabBarController: MainViewModelDelegate {
+extension MainTabBarController: MainViewModelDelegate, ShoppingCartViewModelDelegate {
     func navigateToPizzaDetails(pizza: PizzaEntity) {
         appRouterDelegate?.navigateToPizzaDetails(pizza: pizza)
     }
+    
+    func navigateToPersonalData() {
+        appRouterDelegate?.navigateToPersonalData()
+    }
 
 }
-
 

@@ -7,7 +7,12 @@
 
 import Foundation
 
+protocol ShoppingCartViewModelDelegate: AnyObject {
+    func navigateToPersonalData()
+}
+
 class ShoppingCartViewModel {
+    weak var delegate: ShoppingCartViewModelDelegate?
     
     private(set) var orders: [OrderedPizza] = []
     
@@ -67,6 +72,10 @@ class ShoppingCartViewModel {
     
     func editPizza(at index: Int) {
         // Заглушка: будет реализовано позже
+    }
+    
+    func confirmOrder(){
+        delegate?.navigateToPersonalData()
     }
 
 }

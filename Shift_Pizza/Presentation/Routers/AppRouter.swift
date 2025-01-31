@@ -12,6 +12,8 @@ protocol AppRouterDelegate: AnyObject {
     func navigateToMain()
     func navigateToPizzaDetails(pizza: PizzaEntity)
     func dismissPresentedViewController()
+    func navigateToPersonalData()
+    func navigateToPaymentCard()
 }
 
 final class AppRouter: AppRouterDelegate {
@@ -55,6 +57,22 @@ extension AppRouter {
         
     }
     
+    func navigateToPersonalData() {
+        let pesonalDataViewController = createPersonalDataViewController()
+        guard let navigationController = (window?.rootViewController as? UITabBarController)?
+            .selectedViewController as? UINavigationController else { return }
+        setupNavigationBar(for: pesonalDataViewController, title: "Ваши данные", isPresent: false)
+        navigationController.pushViewController(pesonalDataViewController, animated: true)
+    }
+    
+    func navigateToPaymentCard() {
+        let paymentCardViewController = createPaymentCardViewController()
+        guard let navigationController = (window?.rootViewController as? UITabBarController)?
+            .selectedViewController as? UINavigationController else { return }
+        setupNavigationBar(for: paymentCardViewController, title: "Карта оплаты", isPresent: false)
+        navigationController.pushViewController(paymentCardViewController, animated: true)
+    }
+    
     func dismissPresentedViewController() {
         guard let viewController = window?.rootViewController?.presentedViewController else { return }
         viewController.dismiss(animated: true)
@@ -78,6 +96,22 @@ extension AppRouter {
         pizzaDetailsViewModel.appRouterDelegate = self
         let pizzaDetailsViewController = PizzaDetailsViewController(viewModel: pizzaDetailsViewModel)
         return pizzaDetailsViewController
+    }
+    
+    
+    
+    private func createPersonalDataViewController() -> PersonalDataViewController {
+        let personalDataViewModel = PersonalDataViewModel()
+        personalDataViewModel.appRouterDelegate = self
+        let personalDataViewController = PersonalDataViewController(viewModel: personalDataViewModel)
+        return personalDataViewController
+    }
+    
+    private func createPaymentCardViewController() -> PaymentCardViewController {
+        let paymentCardViewModel = PaymentCardViewModel()
+        paymentCardViewModel.appRouterDelegate = self
+        let paymentCardViewController = PaymentCardViewController(viewModel: paymentCardViewModel)
+        return paymentCardViewController
     }
 
     
@@ -145,10 +179,18 @@ extension AppRouter {
     }
 
     
+//    @objc private func backButtonTapped() {
+//        guard let navigationController = window?.rootViewController as? UINavigationController else { return }
+//        navigationController.popViewController(animated: true)
+//    }
+    
     @objc private func backButtonTapped() {
-        guard let navigationController = window?.rootViewController as? UINavigationController else { return }
+        guard let navigationController = (window?.rootViewController as? UITabBarController)?
+            .selectedViewController as? UINavigationController else { return }
+        
         navigationController.popViewController(animated: true)
     }
+
     
     @objc private func backButtonTappedPresented() {
         guard let viewController = window?.rootViewController else { return }
