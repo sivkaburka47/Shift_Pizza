@@ -14,6 +14,7 @@ protocol AppRouterDelegate: AnyObject {
     func dismissPresentedViewController()
     func navigateToPersonalData(vc: UIViewController)
     func navigateToPaymentCard(vc: UIViewController, person: PersonEntity, address: ReceiverAddressEntity)
+    func navigateToSucces(vc: UIViewController, address: ReceiverAddressEntity)
 }
 
 final class AppRouter: AppRouterDelegate {
@@ -73,6 +74,13 @@ extension AppRouter {
         vc.navigationController?.pushViewController(paymentCardViewController, animated: true)
     }
     
+    func navigateToSucces(vc: UIViewController, address: ReceiverAddressEntity) {
+        let succesViewController = createSuccesViewController(address: address)
+        succesViewController.navigationController?.navigationBar.isTranslucent = false
+        succesViewController.navigationItem.hidesBackButton = true
+        vc.navigationController?.pushViewController(succesViewController, animated: true)
+    }
+    
     func dismissPresentedViewController() {
         guard let viewController = window?.rootViewController?.presentedViewController else { return }
         viewController.dismiss(animated: true)
@@ -115,6 +123,15 @@ extension AppRouter {
         let paymentCardViewController = PaymentCardViewController(viewModel: paymentCardViewModel)
         paymentCardViewModel.uiViewController = paymentCardViewController
         return paymentCardViewController
+    }
+    
+    private func createSuccesViewController( address: ReceiverAddressEntity) -> SuccesViewController {
+        let succesViewModel = SuccesViewModel( address: address)
+        succesViewModel.appRouterDelegate = self
+        let succesViewController = SuccesViewController(viewModel: succesViewModel)
+        succesViewModel.uiViewController = succesViewController
+        
+        return succesViewController
     }
 
     

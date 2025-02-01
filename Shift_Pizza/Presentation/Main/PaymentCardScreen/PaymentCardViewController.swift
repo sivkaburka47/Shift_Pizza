@@ -95,6 +95,7 @@ class PaymentCardViewController: UIViewController {
         confirmButton.setTitle("Оплатить", for: .normal)
         confirmButton.toggleStyle(.inactive)
         view.addSubview(confirmButton)
+        
     }
     
     

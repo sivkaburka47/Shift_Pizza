@@ -58,6 +58,8 @@
 		E6B2B8FA2D4D489E001D084E /* PayOrderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */; };
 		E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */; };
 		E6B2B8FE2D4D4AC3001D084E /* PizzaPaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */; };
+		E6B2B9012D4D7F45001D084E /* SuccesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */; };
+		E6B2B9032D4D7F50001D084E /* SuccesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrderEndPoint.swift; sourceTree = "<group>"; };
 		E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryImpl.swift; sourceTree = "<group>"; };
 		E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPaymentResponse.swift; sourceTree = "<group>"; };
+		E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewController.swift; sourceTree = "<group>"; };
+		E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 		E6B2B8682D48E3E6001D084E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8FF2D4D7F28001D084E /* SuccesScreen */,
 				E6B2B8E52D4BE8A5001D084E /* PaymentCardScreen */,
 				E6B2B8E02D4BD0A8001D084E /* PersonalDataScreen */,
 				E6B2B8C92D4A25A5001D084E /* PizzaDetailsScreen */,
@@ -391,6 +396,15 @@
 			path = PaymentCardScreen;
 			sourceTree = "<group>";
 		};
+		E6B2B8FF2D4D7F28001D084E /* SuccesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */,
+				E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */,
+			);
+			path = SuccesScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -481,6 +495,7 @@
 				E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */,
 				E6B2B8522D48E2E8001D084E /* AppDelegate.swift in Sources */,
 				E6B2B8C62D497D0C001D084E /* GetPizzasCatalogUseCase.swift in Sources */,
+				E6B2B9012D4D7F45001D084E /* SuccesViewController.swift in Sources */,
 				E6B2B8F02D4CD8FC001D084E /* FormTextField.swift in Sources */,
 				E6B2B8542D48E2E8001D084E /* SceneDelegate.swift in Sources */,
 				E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */,
@@ -488,6 +503,7 @@
 				E6B2B8F22D4D2061001D084E /* ReceiverAddressEntity.swift in Sources */,
 				E6B2B8F62D4D4550001D084E /* PayForOrderUseCase.swift in Sources */,
 				E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */,
+				E6B2B9032D4D7F50001D084E /* SuccesViewModel.swift in Sources */,
 				E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */,
 				E6B2B8F82D4D46C4001D084E /* OrderRepository.swift in Sources */,
 				E6B2B8852D492A2B001D084E /* ShoppingCartViewController.swift in Sources */,

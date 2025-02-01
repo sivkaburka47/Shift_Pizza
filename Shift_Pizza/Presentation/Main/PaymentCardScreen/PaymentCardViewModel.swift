@@ -120,14 +120,21 @@ class PaymentCardViewModel {
         Task {
             do {
                 let paymentOrder = try await payForOrderUseCase.execute(request: pizzaPayment)
-                print("Ответ \(paymentOrder.success)")
+                
+                guard paymentOrder.success else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    guard let vc = self.uiViewController else { return }
+                    self.appRouterDelegate?.navigateToSucces(vc: vc, address: self.address)
+                }
             } catch {
                 print("Ошибка при оплате: \(error)")
             }
         }
 
-        guard let vc = uiViewController else { return }
-//        appRouterDelegate?.navigateToOrderConfirmation(vc: vc)
+
     }
     
     
