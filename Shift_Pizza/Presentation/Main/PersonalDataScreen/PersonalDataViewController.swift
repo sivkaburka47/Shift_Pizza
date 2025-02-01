@@ -162,7 +162,7 @@ class PersonalDataViewController: UIViewController {
         configureTextField(middleNameField, title: "Отчество (при наличии)", placeholder: "Отчество")
         configureTextField(phoneField, title: "Номер телефона*", placeholder: "Номер телефона", keyboardType: .phonePad)
         configureTextField(streetField, title: "Улица*", placeholder: "Название улицы")
-        configureTextField(houseField, title: "Дом*", placeholder: "Номер дома", keyboardType: .numberPad)
+        configureTextField(houseField, title: "Дом*", placeholder: "Номер дома")
         configureTextField(apartmentField, title: "Квартира*", placeholder: "Номер квартиры")
         configureTextField(commentField, title: "Комментарий", placeholder: "Дополнительная информация")
     }

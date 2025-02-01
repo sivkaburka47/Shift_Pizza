@@ -58,7 +58,7 @@ class SuccesViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
         
-        addressView.configure(title: "Адрес доставки", value: "\(viewModel.address.street), \(viewModel.address.house), \(viewModel.address.apartment) ")
+        addressView.configure(title: "Адрес доставки", value: "ул. \(viewModel.address.street), д. \(viewModel.address.house), кв. \(viewModel.address.apartment) ")
         totalPriceView.configure(title: "Сумма заказа", value: "\(viewModel.totalPrice) ₽")
         
         infoLabel.text = "Вся информация была продублирована в SMS"

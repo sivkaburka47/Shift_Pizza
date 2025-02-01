@@ -145,7 +145,7 @@ class PaymentCardViewController: UIViewController {
     
     private func setupTextFields() {
         cardNumberField.textField.keyboardType = .numberPad
-        expiryDateField.textField.keyboardType = .numbersAndPunctuation
+        expiryDateField.textField.keyboardType = .numberPad
         cvvField.textField.keyboardType = .numberPad
         
         [cardNumberField, expiryDateField, cvvField].forEach {

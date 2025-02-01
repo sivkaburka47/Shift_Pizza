@@ -29,7 +29,7 @@ class PersonalDataViewModel {
         }
     }
     
-    var isMiddlenameValid: Bool = false {
+    var isMiddlenameValid: Bool = true {
         didSet {
             validateFields()
         }
@@ -59,7 +59,7 @@ class PersonalDataViewModel {
         }
     }
     
-    var isAddressValid: Bool = false {
+    var isCommentValid: Bool = true {
         didSet {
             validateFields()
         }
@@ -99,7 +99,7 @@ class PersonalDataViewModel {
     }
     func updateMiddlename(_ middlename: String) {
         self.person.middlename = middlename
-        isMiddlenameValid = !middlename.isEmpty
+        isMiddlenameValid = true
         validateFields()
     }
     
@@ -129,7 +129,7 @@ class PersonalDataViewModel {
     
     func updateComment(_ comment: String) {
         self.address.comment = comment
-        isAddressValid = !comment.isEmpty
+        isCommentValid = true
         validateFields()
     }
     
@@ -143,9 +143,9 @@ class PersonalDataViewModel {
         let isStreetValid = self.isStreetValid
         let isHouseValid = self.isHouseValid
         let isApartmentValid = self.isApartmentValid
-        let isAddressValid = self.isAddressValid
+        let isCommentValid = self.isCommentValid
         
-        let isValid = isFirstnameValid && isLastnameValid && isMiddlenameValid && isPhoneValid && isStreetValid && isHouseValid && isApartmentValid && isAddressValid
+        let isValid = isFirstnameValid && isLastnameValid && isMiddlenameValid && isPhoneValid && isStreetValid && isHouseValid && isApartmentValid && isCommentValid
         isConfirmButtonActive?(isValid)
     }
     
