@@ -64,6 +64,19 @@ extension AppRouter {
 //            .selectedViewController as? UINavigationController else { return }
         setupNavigationBar(for: pesonalDataViewController, title: "Ваши данные", isPresent: false)
         vc.navigationController?.pushViewController(pesonalDataViewController, animated: true)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(named: "White")
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor(named: "Primary")!,
+            .font: UIFont.systemFont(ofSize: 24, weight: .bold)
+        ]
+        vc.navigationController?.navigationBar.standardAppearance = appearance
+        vc.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        vc.navigationController?.navigationBar.compactAppearance = appearance
+        
+        vc.navigationController?.navigationBar.isTranslucent = false
+        vc.navigationItem.hidesBackButton = true
     }
     
     func navigateToPaymentCard(vc: UIViewController, person: PersonEntity, address: ReceiverAddressEntity) {
@@ -72,13 +85,40 @@ extension AppRouter {
 //            .selectedViewController as? UINavigationController else { return }
         setupNavigationBar(for: paymentCardViewController, title: "Карта оплаты", isPresent: false)
         vc.navigationController?.pushViewController(paymentCardViewController, animated: true)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(named: "White")
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor(named: "Primary")!,
+            .font: UIFont.systemFont(ofSize: 24, weight: .bold)
+        ]
+        vc.navigationController?.navigationBar.standardAppearance = appearance
+        vc.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        vc.navigationController?.navigationBar.compactAppearance = appearance
+        
+        vc.navigationController?.navigationBar.isTranslucent = false
+        vc.navigationItem.hidesBackButton = true
     }
     
     func navigateToSucces(vc: UIViewController, address: ReceiverAddressEntity) {
         let succesViewController = createSuccesViewController(address: address)
         succesViewController.navigationController?.navigationBar.isTranslucent = false
+        
         succesViewController.navigationItem.hidesBackButton = true
         vc.navigationController?.pushViewController(succesViewController, animated: true)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(named: "White")
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor(named: "Primary")!,
+            .font: UIFont.systemFont(ofSize: 24, weight: .bold)
+        ]
+        vc.navigationController?.navigationBar.standardAppearance = appearance
+        vc.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        vc.navigationController?.navigationBar.compactAppearance = appearance
+        
+        vc.navigationController?.navigationBar.isTranslucent = false
+        vc.navigationItem.hidesBackButton = true
     }
     
     func dismissPresentedViewController() {
@@ -156,11 +196,13 @@ extension AppRouter {
     private func setupNavigationBar(for viewController: UIViewController, title: String, isPresent: Bool = false) {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = UIColor(named: "White")
         appearance.titleTextAttributes = [
             .foregroundColor: UIColor(named: "Primary")!,
             .font: UIFont.systemFont(ofSize: 24, weight: .bold)
         ]
+        
+        
         
         viewController.navigationController?.navigationBar.standardAppearance = appearance
         viewController.navigationController?.navigationBar.scrollEdgeAppearance = appearance
@@ -168,6 +210,7 @@ extension AppRouter {
         
         viewController.navigationController?.navigationBar.isTranslucent = false
         viewController.navigationItem.hidesBackButton = true
+        
         
         let titleLabel = UILabel()
         titleLabel.text = title
