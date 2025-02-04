@@ -14,6 +14,52 @@
 		E6B2B86B2D48E3FF001D084E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B86A2D48E3FF001D084E /* AppRouter.swift */; };
 		E6B2B86D2D48E409001D084E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B86C2D48E409001D084E /* MainViewController.swift */; };
 		E6B2B86F2D48E412001D084E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B86E2D48E412001D084E /* MainViewModel.swift */; };
+		E6B2B87D2D4929F3001D084E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B87C2D4929F3001D084E /* OrderViewController.swift */; };
+		E6B2B87F2D4929FF001D084E /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B87E2D4929FF001D084E /* OrderViewModel.swift */; };
+		E6B2B8812D492A0D001D084E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8802D492A0D001D084E /* UserViewController.swift */; };
+		E6B2B8832D492A18001D084E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8822D492A18001D084E /* UserViewModel.swift */; };
+		E6B2B8852D492A2B001D084E /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8842D492A2B001D084E /* ShoppingCartViewController.swift */; };
+		E6B2B8872D492A36001D084E /* ShoppingCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8862D492A36001D084E /* ShoppingCartViewModel.swift */; };
+		E6B2B88A2D492B8B001D084E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8892D492B8B001D084E /* MainTabBarController.swift */; };
+		E6B2B89A2D494131001D084E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8992D494131001D084E /* SignInViewController.swift */; };
+		E6B2B89C2D49413A001D084E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B89B2D49413A001D084E /* SignInViewModel.swift */; };
+		E6B2B8A72D494E89001D084E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E6B2B8A62D494E89001D084E /* SnapKit */; };
+		E6B2B8AC2D496FF1001D084E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E6B2B8AB2D496FF1001D084E /* Alamofire */; };
+		E6B2B8B12D49701B001D084E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E6B2B8B02D49701B001D084E /* Kingfisher */; };
+		E6B2B8B32D4971CB001D084E /* PizzasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8B22D4971CB001D084E /* PizzasResponse.swift */; };
+		E6B2B8B52D49739D001D084E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8B42D49739D001D084E /* HTTPClient.swift */; };
+		E6B2B8B72D4973C0001D084E /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8B62D4973C0001D084E /* APIEndpoint.swift */; };
+		E6B2B8B92D4973D2001D084E /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8B82D4973D2001D084E /* BaseURL.swift */; };
+		E6B2B8BB2D49747C001D084E /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8BA2D49747C001D084E /* AlamofireHTTPClient.swift */; };
+		E6B2B8BE2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8BD2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift */; };
+		E6B2B8C02D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8BF2D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift */; };
+		E6B2B8C22D497A2C001D084E /* GetPizzasCatalogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C12D497A2C001D084E /* GetPizzasCatalogRepository.swift */; };
+		E6B2B8C42D497BF4001D084E /* EmptyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */; };
+		E6B2B8C62D497D0C001D084E /* GetPizzasCatalogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */; };
+		E6B2B8C82D497EEE001D084E /* PizzasEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */; };
+		E6B2B8CB2D4A25BE001D084E /* PizzaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */; };
+		E6B2B8CD2D4A25C5001D084E /* PizzaDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */; };
+		E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */; };
+		E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */; };
+		E6B2B8D32D4A6FFE001D084E /* SupplementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */; };
+		E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */; };
+		E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */; };
+		E6B2B8D92D4AB99D001D084E /* OrderedPizzaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */; };
+		E6B2B8E22D4BD0D3001D084E /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E12D4BD0D3001D084E /* PersonalDataViewController.swift */; };
+		E6B2B8E42D4BD0DB001D084E /* PersonalDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E32D4BD0DB001D084E /* PersonalDataViewModel.swift */; };
+		E6B2B8E72D4BE8B2001D084E /* PaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E62D4BE8B2001D084E /* PaymentCardViewController.swift */; };
+		E6B2B8E92D4BE8BC001D084E /* PaymentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8E82D4BE8BC001D084E /* PaymentCardViewModel.swift */; };
+		E6B2B8EE2D4CA705001D084E /* PersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */; };
+		E6B2B8F02D4CD8FC001D084E /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8EF2D4CD8FC001D084E /* FormTextField.swift */; };
+		E6B2B8F22D4D2061001D084E /* ReceiverAddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */; };
+		E6B2B8F42D4D3AFC001D084E /* CreatePizzaPaymentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */; };
+		E6B2B8F62D4D4550001D084E /* PayForOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */; };
+		E6B2B8F82D4D46C4001D084E /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */; };
+		E6B2B8FA2D4D489E001D084E /* PayOrderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */; };
+		E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */; };
+		E6B2B8FE2D4D4AC3001D084E /* PizzaPaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */; };
+		E6B2B9012D4D7F45001D084E /* SuccesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */; };
+		E6B2B9032D4D7F50001D084E /* SuccesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +72,49 @@
 		E6B2B86A2D48E3FF001D084E /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		E6B2B86C2D48E409001D084E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E6B2B86E2D48E412001D084E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E6B2B87C2D4929F3001D084E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		E6B2B87E2D4929FF001D084E /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8802D492A0D001D084E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		E6B2B8822D492A18001D084E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8842D492A2B001D084E /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		E6B2B8862D492A36001D084E /* ShoppingCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8892D492B8B001D084E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E6B2B8992D494131001D084E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E6B2B89B2D49413A001D084E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8B22D4971CB001D084E /* PizzasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasResponse.swift; sourceTree = "<group>"; };
+		E6B2B8B42D49739D001D084E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		E6B2B8B62D4973C0001D084E /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E6B2B8B82D4973D2001D084E /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		E6B2B8BA2D49747C001D084E /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
+		E6B2B8BD2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPizzasCatalogEndpoint.swift; sourceTree = "<group>"; };
+		E6B2B8BF2D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPizzasCatalogRepositoryImpl.swift; sourceTree = "<group>"; };
+		E6B2B8C12D497A2C001D084E /* GetPizzasCatalogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPizzasCatalogRepository.swift; sourceTree = "<group>"; };
+		E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequestModel.swift; sourceTree = "<group>"; };
+		E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPizzasCatalogUseCase.swift; sourceTree = "<group>"; };
+		E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasEntity.swift; sourceTree = "<group>"; };
+		E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewController.swift; sourceTree = "<group>"; };
+		E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitButton.swift; sourceTree = "<group>"; };
+		E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementCell.swift; sourceTree = "<group>"; };
+		E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCustomButton.swift; sourceTree = "<group>"; };
+		E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitButtonDuo.swift; sourceTree = "<group>"; };
+		E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedPizzaEntity.swift; sourceTree = "<group>"; };
+		E6B2B8E12D4BD0D3001D084E /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
+		E6B2B8E32D4BD0DB001D084E /* PersonalDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8E62D4BE8B2001D084E /* PaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewController.swift; sourceTree = "<group>"; };
+		E6B2B8E82D4BE8BC001D084E /* PaymentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewModel.swift; sourceTree = "<group>"; };
+		E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEntity.swift; sourceTree = "<group>"; };
+		E6B2B8EF2D4CD8FC001D084E /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverAddressEntity.swift; sourceTree = "<group>"; };
+		E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePizzaPaymentDto.swift; sourceTree = "<group>"; };
+		E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForOrderUseCase.swift; sourceTree = "<group>"; };
+		E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrderEndPoint.swift; sourceTree = "<group>"; };
+		E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryImpl.swift; sourceTree = "<group>"; };
+		E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPaymentResponse.swift; sourceTree = "<group>"; };
+		E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewController.swift; sourceTree = "<group>"; };
+		E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +122,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B2B8B12D49701B001D084E /* Kingfisher in Frameworks */,
+				E6B2B8A72D494E89001D084E /* SnapKit in Frameworks */,
+				E6B2B8AC2D496FF1001D084E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +181,8 @@
 		E6B2B8672D48E3DF001D084E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B89D2D49441F001D084E /* Components */,
+				E6B2B8982D494103001D084E /* Authorization */,
 				E6B2B8692D48E3EA001D084E /* Routers */,
 				E6B2B8682D48E3E6001D084E /* Main */,
 			);
@@ -98,8 +192,15 @@
 		E6B2B8682D48E3E6001D084E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E6B2B86C2D48E409001D084E /* MainViewController.swift */,
-				E6B2B86E2D48E412001D084E /* MainViewModel.swift */,
+				E6B2B8FF2D4D7F28001D084E /* SuccesScreen */,
+				E6B2B8E52D4BE8A5001D084E /* PaymentCardScreen */,
+				E6B2B8E02D4BD0A8001D084E /* PersonalDataScreen */,
+				E6B2B8C92D4A25A5001D084E /* PizzaDetailsScreen */,
+				E6B2B8882D492B7B001D084E /* MainTabBar */,
+				E6B2B87B2D4929C5001D084E /* ShoppingCartScreen */,
+				E6B2B87A2D4929BF001D084E /* UserScreen */,
+				E6B2B8792D4929B6001D084E /* OrderScreen */,
+				E6B2B8782D4929A8001D084E /* PizzaScreen */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -115,6 +216,7 @@
 		E6B2B8702D4925B7001D084E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8BC2D4976B7001D084E /* Endpoints */,
 				E6B2B8772D4925FD001D084E /* Network */,
 				E6B2B8762D4925F8001D084E /* Models */,
 				E6B2B8752D4925ED001D084E /* Repositories */,
@@ -135,6 +237,8 @@
 		E6B2B8722D4925D6001D084E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8C12D497A2C001D084E /* GetPizzasCatalogRepository.swift */,
+				E6B2B8F72D4D46C4001D084E /* OrderRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -142,6 +246,8 @@
 		E6B2B8732D4925DC001D084E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8C52D497D0C001D084E /* GetPizzasCatalogUseCase.swift */,
+				E6B2B8F52D4D4550001D084E /* PayForOrderUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -149,6 +255,10 @@
 		E6B2B8742D4925E2001D084E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8C72D497EEE001D084E /* PizzasEntity.swift */,
+				E6B2B8D82D4AB99D001D084E /* OrderedPizzaEntity.swift */,
+				E6B2B8ED2D4CA705001D084E /* PersonEntity.swift */,
+				E6B2B8F12D4D2061001D084E /* ReceiverAddressEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -156,6 +266,8 @@
 		E6B2B8752D4925ED001D084E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8BF2D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift */,
+				E6B2B8FB2D4D49BD001D084E /* OrderRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -163,6 +275,10 @@
 		E6B2B8762D4925F8001D084E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8FD2D4D4AC3001D084E /* PizzaPaymentResponse.swift */,
+				E6B2B8B22D4971CB001D084E /* PizzasResponse.swift */,
+				E6B2B8C32D497BF4001D084E /* EmptyRequestModel.swift */,
+				E6B2B8F32D4D3AFC001D084E /* CreatePizzaPaymentDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,8 +286,123 @@
 		E6B2B8772D4925FD001D084E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2B8B42D49739D001D084E /* HTTPClient.swift */,
+				E6B2B8B62D4973C0001D084E /* APIEndpoint.swift */,
+				E6B2B8B82D4973D2001D084E /* BaseURL.swift */,
+				E6B2B8BA2D49747C001D084E /* AlamofireHTTPClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E6B2B8782D4929A8001D084E /* PizzaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B86E2D48E412001D084E /* MainViewModel.swift */,
+				E6B2B86C2D48E409001D084E /* MainViewController.swift */,
+			);
+			path = PizzaScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B8792D4929B6001D084E /* OrderScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B87C2D4929F3001D084E /* OrderViewController.swift */,
+				E6B2B87E2D4929FF001D084E /* OrderViewModel.swift */,
+			);
+			path = OrderScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B87A2D4929BF001D084E /* UserScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8802D492A0D001D084E /* UserViewController.swift */,
+				E6B2B8822D492A18001D084E /* UserViewModel.swift */,
+			);
+			path = UserScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B87B2D4929C5001D084E /* ShoppingCartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8842D492A2B001D084E /* ShoppingCartViewController.swift */,
+				E6B2B8862D492A36001D084E /* ShoppingCartViewModel.swift */,
+			);
+			path = ShoppingCartScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B8882D492B7B001D084E /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8892D492B8B001D084E /* MainTabBarController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		E6B2B8982D494103001D084E /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8992D494131001D084E /* SignInViewController.swift */,
+				E6B2B89B2D49413A001D084E /* SignInViewModel.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		E6B2B89D2D49441F001D084E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8CE2D4A5E0B001D084E /* SplitButton.swift */,
+				E6B2B8D02D4A5E8F001D084E /* CustomButton.swift */,
+				E6B2B8D22D4A6FFE001D084E /* SupplementCell.swift */,
+				E6B2B8D42D4AB178001D084E /* LargeCustomButton.swift */,
+				E6B2B8D62D4AB5E3001D084E /* SplitButtonDuo.swift */,
+				E6B2B8EF2D4CD8FC001D084E /* FormTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E6B2B8BC2D4976B7001D084E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8BD2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift */,
+				E6B2B8F92D4D489E001D084E /* PayOrderEndPoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E6B2B8C92D4A25A5001D084E /* PizzaDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8CA2D4A25BE001D084E /* PizzaDetailsViewController.swift */,
+				E6B2B8CC2D4A25C5001D084E /* PizzaDetailsViewModel.swift */,
+			);
+			path = PizzaDetailsScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B8E02D4BD0A8001D084E /* PersonalDataScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8E12D4BD0D3001D084E /* PersonalDataViewController.swift */,
+				E6B2B8E32D4BD0DB001D084E /* PersonalDataViewModel.swift */,
+			);
+			path = PersonalDataScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B8E52D4BE8A5001D084E /* PaymentCardScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B8E62D4BE8B2001D084E /* PaymentCardViewController.swift */,
+				E6B2B8E82D4BE8BC001D084E /* PaymentCardViewModel.swift */,
+			);
+			path = PaymentCardScreen;
+			sourceTree = "<group>";
+		};
+		E6B2B8FF2D4D7F28001D084E /* SuccesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2B9002D4D7F45001D084E /* SuccesViewController.swift */,
+				E6B2B9022D4D7F50001D084E /* SuccesViewModel.swift */,
+			);
+			path = SuccesScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +421,11 @@
 			dependencies = (
 			);
 			name = Shift_Pizza;
+			packageProductDependencies = (
+				E6B2B8A62D494E89001D084E /* SnapKit */,
+				E6B2B8AB2D496FF1001D084E /* Alamofire */,
+				E6B2B8B02D49701B001D084E /* Kingfisher */,
+			);
 			productName = Shift_Pizza;
 			productReference = E6B2B84E2D48E2E8001D084E /* Shift_Pizza.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +454,11 @@
 				Base,
 			);
 			mainGroup = E6B2B8452D48E2E8001D084E;
+			packageReferences = (
+				E6B2B8A52D494E89001D084E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E6B2B8AA2D496FF1001D084E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E6B2B8AF2D49701B001D084E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E6B2B84F2D48E2E8001D084E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -245,10 +486,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6B2B86F2D48E412001D084E /* MainViewModel.swift in Sources */,
+				E6B2B8812D492A0D001D084E /* UserViewController.swift in Sources */,
+				E6B2B8C22D497A2C001D084E /* GetPizzasCatalogRepository.swift in Sources */,
+				E6B2B88A2D492B8B001D084E /* MainTabBarController.swift in Sources */,
+				E6B2B8D92D4AB99D001D084E /* OrderedPizzaEntity.swift in Sources */,
+				E6B2B8E72D4BE8B2001D084E /* PaymentCardViewController.swift in Sources */,
+				E6B2B8E92D4BE8BC001D084E /* PaymentCardViewModel.swift in Sources */,
+				E6B2B8D12D4A5E8F001D084E /* CustomButton.swift in Sources */,
 				E6B2B8522D48E2E8001D084E /* AppDelegate.swift in Sources */,
+				E6B2B8C62D497D0C001D084E /* GetPizzasCatalogUseCase.swift in Sources */,
+				E6B2B9012D4D7F45001D084E /* SuccesViewController.swift in Sources */,
+				E6B2B8F02D4CD8FC001D084E /* FormTextField.swift in Sources */,
 				E6B2B8542D48E2E8001D084E /* SceneDelegate.swift in Sources */,
+				E6B2B8D52D4AB178001D084E /* LargeCustomButton.swift in Sources */,
+				E6B2B89A2D494131001D084E /* SignInViewController.swift in Sources */,
+				E6B2B8F22D4D2061001D084E /* ReceiverAddressEntity.swift in Sources */,
+				E6B2B8F62D4D4550001D084E /* PayForOrderUseCase.swift in Sources */,
+				E6B2B8FC2D4D49BD001D084E /* OrderRepositoryImpl.swift in Sources */,
+				E6B2B9032D4D7F50001D084E /* SuccesViewModel.swift in Sources */,
+				E6B2B8CF2D4A5E0B001D084E /* SplitButton.swift in Sources */,
+				E6B2B8F82D4D46C4001D084E /* OrderRepository.swift in Sources */,
+				E6B2B8852D492A2B001D084E /* ShoppingCartViewController.swift in Sources */,
+				E6B2B8FE2D4D4AC3001D084E /* PizzaPaymentResponse.swift in Sources */,
 				E6B2B86B2D48E3FF001D084E /* AppRouter.swift in Sources */,
+				E6B2B8B92D4973D2001D084E /* BaseURL.swift in Sources */,
+				E6B2B89C2D49413A001D084E /* SignInViewModel.swift in Sources */,
+				E6B2B8C82D497EEE001D084E /* PizzasEntity.swift in Sources */,
+				E6B2B8BE2D4976F8001D084E /* GetPizzasCatalogEndpoint.swift in Sources */,
+				E6B2B8E22D4BD0D3001D084E /* PersonalDataViewController.swift in Sources */,
+				E6B2B8D32D4A6FFE001D084E /* SupplementCell.swift in Sources */,
 				E6B2B86D2D48E409001D084E /* MainViewController.swift in Sources */,
+				E6B2B8B52D49739D001D084E /* HTTPClient.swift in Sources */,
+				E6B2B87F2D4929FF001D084E /* OrderViewModel.swift in Sources */,
+				E6B2B8BB2D49747C001D084E /* AlamofireHTTPClient.swift in Sources */,
+				E6B2B8CB2D4A25BE001D084E /* PizzaDetailsViewController.swift in Sources */,
+				E6B2B8872D492A36001D084E /* ShoppingCartViewModel.swift in Sources */,
+				E6B2B8832D492A18001D084E /* UserViewModel.swift in Sources */,
+				E6B2B8E42D4BD0DB001D084E /* PersonalDataViewModel.swift in Sources */,
+				E6B2B8F42D4D3AFC001D084E /* CreatePizzaPaymentDto.swift in Sources */,
+				E6B2B8B72D4973C0001D084E /* APIEndpoint.swift in Sources */,
+				E6B2B8C02D497965001D084E /* GetPizzasCatalogRepositoryImpl.swift in Sources */,
+				E6B2B8C42D497BF4001D084E /* EmptyRequestModel.swift in Sources */,
+				E6B2B8B32D4971CB001D084E /* PizzasResponse.swift in Sources */,
+				E6B2B87D2D4929F3001D084E /* OrderViewController.swift in Sources */,
+				E6B2B8FA2D4D489E001D084E /* PayOrderEndPoint.swift in Sources */,
+				E6B2B8CD2D4A25C5001D084E /* PizzaDetailsViewModel.swift in Sources */,
+				E6B2B8D72D4AB5E3001D084E /* SplitButtonDuo.swift in Sources */,
+				E6B2B8EE2D4CA705001D084E /* PersonEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +681,7 @@
 				INFOPLIST_FILE = Shift_Pizza/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -424,6 +709,7 @@
 				INFOPLIST_FILE = Shift_Pizza/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +747,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6B2B8A52D494E89001D084E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		E6B2B8AA2D496FF1001D084E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+		E6B2B8AF2D49701B001D084E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6B2B8A62D494E89001D084E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6B2B8A52D494E89001D084E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E6B2B8AB2D496FF1001D084E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6B2B8AA2D496FF1001D084E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E6B2B8B02D49701B001D084E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6B2B8AF2D49701B001D084E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E6B2B8462D48E2E8001D084E /* Project object */;
 }
